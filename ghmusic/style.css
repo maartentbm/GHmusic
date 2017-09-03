@@ -18,7 +18,7 @@ body {
 	margin: 0px auto;
 	background-color: white;
 	font-family: Calibri, sans-serif;
-	font-size: 14pt;
+	font-size: 13pt;
 	color: black;
 	min-width: 700px;
 	width: 70%;
@@ -125,6 +125,11 @@ content {
 	font-size: xx-large;
 	color: red;
 	text-align: center;
+}
+
+h2 {
+	font-size: 125%;
+	margin-top: 25px;
 }
 
 footer {
