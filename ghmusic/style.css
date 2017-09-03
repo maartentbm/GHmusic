@@ -41,7 +41,7 @@ body[data-lang="en"] [lang]:not([lang="en"]) {
 }
 
 header {
-	padding: 10px;
+	padding: 0;
 	background-color: #bababa;
 	color: #003080;
 }
@@ -115,6 +115,7 @@ header h1 em {
 
 content {
 	flex: 1;
+	flex-basis: auto; /* IE */
 	display: block;
 	padding: 0 15px;
 	padding-bottom: 25px;
