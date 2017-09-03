@@ -9,12 +9,12 @@ body {
 	max-width: 100%
 }
 
-.nl, .en {
+[lang] {
 	display: none;
 }
 
-body[data-lang="nl"] .nl,
-body[data-lang="en"] .en {
+body[data-lang="nl"] [lang="nl"],
+body[data-lang="en"] [lang="en"] {
 	display: initial;
 }
 
