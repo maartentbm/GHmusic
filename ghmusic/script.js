@@ -12,6 +12,8 @@ $(function () {
 		}
 	};
 
+	var ignoreHashChange = false;
+
 	var setPage = function (event, pageId) {
 		var pageId = pageId || $(event.target).closest('.set-page').data('pageId') || 'invalid',
 			menuTop = $("#menu").offset().top,
@@ -19,15 +21,23 @@ $(function () {
 
 		$('.active').removeClass('active');
 		$('[data-page-id=' + pageId + ']').addClass('active');
+		ignoreHashChange = true;
 		window.location.hash = '#' + pageId;
+		ignoreHashChange = false;
 		if (currentPos > menuTop) {
 			$("html, body").animate({ scrollTop: menuTop }, "slow");
 		}
 	};
 
-	var hash = window.location.hash.replace("#", "");
-	hash && $('.page[data-page-id=' + hash + ']').length && setPage(null, hash);
+	var setPageFromHash = function () {
+		console.error("setPageFromHash");
+		if (!ignoreHashChange) {
+			var hash = window.location.hash.replace("#", "") || "home";
+			hash && $('.page[data-page-id=' + hash + ']').length && setPage(null, hash);
+		}
+	}
 
+	setPageFromHash();
 	try {
 		var storedLang = localStorage.getItem('lang');
 	} catch (error) {
@@ -37,4 +47,5 @@ $(function () {
 
 	$('.set-page[data-page-id]').click(setPage);
 	$('[data-set-lang]').click(setLanguage);
+	$(window).on('hashchange', setPageFromHash);
 });
