@@ -122,7 +122,9 @@ content {
 }
 
 .construction {
-	font-size: larger;
+	font-size: xx-large;
+	color: red;
+	text-align: center;
 }
 
 footer {
