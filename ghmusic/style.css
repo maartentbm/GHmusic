@@ -98,6 +98,11 @@ header h1 em {
 	background-color: #bf0010;
 }
 
+content {
+	display: block;
+	padding: 0 15px;
+}
+
 .construction {
 	font-size: 20pt;
 }
