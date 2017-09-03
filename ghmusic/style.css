@@ -1,12 +1,25 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
 	position: relative;
 	margin: 0px auto;
+	padding-bottom: 5rem;
 	background-color: white;
 	font-family: Calibri, sans-serif;
 	color: black;
 	min-width: 700px;
 	width: 70%;
-	max-width: 100%
+	max-width: 100%;
+	min-height: 100%;
 }
 
 .page:not(.active),
@@ -91,8 +104,9 @@ header h1 em {
 
 footer {
 	position: absolute;
-	left: 0;
 	right: 0;
 	bottom: 0;
+	left: 0;
+	padding: 1rem;
 	background-color: grey;
 }
