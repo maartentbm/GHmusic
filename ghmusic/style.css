@@ -132,6 +132,13 @@ h2 {
 	margin-top: 25px;
 }
 
+img {
+	width: 250px;
+	max-width: 50%;
+	float: right;
+	margin-left: 10px;
+}
+
 footer {
 	background-color: darkgray;
 }
