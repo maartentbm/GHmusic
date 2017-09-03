@@ -12,9 +12,10 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	margin: 0px auto;
-	padding-bottom: 150px;
 	background-color: white;
 	font-family: Calibri, sans-serif;
 	font-size: 14pt;
@@ -25,7 +26,7 @@ body {
 	min-height: 100%;
 }
 
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-width: 700px) {
 	body {
 		width: 100%;
 		min-width: 100%;
@@ -76,6 +77,10 @@ header h1 em {
 	cursor: pointer;
 }
 
+.set-page {
+	cursor: pointer;
+}
+
 #menu li a {
 	display: block;
 	color: white;
@@ -109,8 +114,10 @@ header h1 em {
 }
 
 content {
+	flex: 1;
 	display: block;
 	padding: 0 15px;
+	padding-bottom: 25px;
 }
 
 .construction {
@@ -118,10 +125,34 @@ content {
 }
 
 footer {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 1rem;
-	background-color: grey;
+	background-color: darkgray;
+}
+
+#footer-menu {
+	display: flex;
+	padding-left: 15px;
+}
+
+#footer-menu div {
+	flex: 0.5;
+	padding: 15px;
+	padding-left: 0px;
+}
+
+@media (max-width: 600px) {
+	#footer-menu {
+		flex-direction: column;
+	}
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer .copyright {
+	padding: 15px;
+	background-color: gray;
+	color: darkgray;
+	font-size: small;
+	text-align: center;
 }
