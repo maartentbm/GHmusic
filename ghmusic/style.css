@@ -9,13 +9,11 @@ body {
 	max-width: 100%
 }
 
-[lang] {
+.page:not(.active),
+[data-set-lang].selected,
+body[data-lang="nl"] [lang]:not([lang="nl"]),
+body[data-lang="en"] [lang]:not([lang="en"]) {
 	display: none;
-}
-
-body[data-lang="nl"] [lang="nl"],
-body[data-lang="en"] [lang="en"] {
-	display: initial;
 }
 
 header {
@@ -30,6 +28,15 @@ header h1 {
 
 header h1 em {
 	font-size: larger;
+}
+
+.noscript {
+	background-color: red;
+	font-size: large;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	color: white;
 }
 
 #menu {
@@ -76,11 +83,6 @@ header h1 em {
 
 #menu .active {
 	background-color: #bf0010;
-}
-
-.page:not(.active),
-[data-set-lang].selected {
-	display: none;
 }
 
 .construction {
