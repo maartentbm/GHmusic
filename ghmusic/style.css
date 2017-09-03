@@ -1,0 +1,96 @@
+body {
+	position: relative;
+	margin: 0px auto;
+	background-color: white;
+	font-family: Calibri, sans-serif;
+	color: black;
+	min-width: 700px;
+	width: 70%;
+	max-width: 100%
+}
+
+.nl, .en {
+	display: none;
+}
+
+body[data-lang="nl"] .nl,
+body[data-lang="en"] .en {
+	display: initial;
+}
+
+header {
+	padding: 10px;
+	background-color: #bababa;
+	color: #003080;
+}
+
+header h1 {
+	text-align: center;
+}
+
+header h1 em {
+	font-size: larger;
+}
+
+#menu {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+#menu li {
+	float: left;
+	cursor: pointer;
+}
+
+#menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#menu li[data-set-lang] {
+	float: right;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding: 0 20px;
+}
+
+#menu li[data-set-lang="en"] {
+	background-image: url('english.png');
+}
+
+#menu li[data-set-lang="nl"] {
+	background-image: url('dutch.png');
+}
+
+#menu li:not(.active):hover {
+	background-color: #111;
+}
+
+#menu .active {
+	background-color: #bf0010;
+}
+
+.page:not(.active),
+[data-set-lang].selected {
+	display: none;
+}
+
+.construction {
+	font-size: 20pt;
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: grey;
+}
