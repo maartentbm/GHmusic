@@ -20,10 +20,17 @@ window.onload = function () {
 	storedLang && ['nl', 'en'].indexOf(storedLang) > -1 && setLanguage(null, storedLang);
 
 	$('.set-page[data-page-id]').click(function (event) {
-		var pageId = $(event.target).closest('.set-page').data('pageId') || 'invalid';
+		var pageId = $(event.target).closest('.set-page').data('pageId') || 'invalid',
+			menuTop = $("#menu").offset().top,
+			currentPos = Math.max($('html').scrollTop(), $('body').scrollTop());
+
 		$('.active').removeClass('active');
 		$('[data-page-id=' + pageId + ']').addClass('active');
+		if (currentPos > menuTop) {
+			$("html, body").animate({ scrollTop: menuTop }, "slow");
+		}
 	});
+
 	$('[data-set-lang]').click(setLanguage);
 
 };
