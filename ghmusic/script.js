@@ -6,10 +6,17 @@ window.onload = function () {
 		$('.selected').removeClass('selected');
 		(li || $('[data-set-lang=' + langId + ']')).addClass('selected');
 		$('body').attr('data-lang', langId);
-		localStorage.setItem('lang', langId);
+		try {
+			localStorage.setItem('lang', langId);
+		} catch (error) {
+		}
 	}
-	debugger;
-	var storedLang = localStorage.getItem('lang');
+
+	try {
+		var storedLang = localStorage.getItem('lang');
+	} catch (error) {
+		storedLang = null;
+	}
 	storedLang && ['nl', 'en'].indexOf(storedLang) > -1 && setLanguage(null, storedLang);
 
 	$('.set-page[data-page-id]').click(function (event) {
