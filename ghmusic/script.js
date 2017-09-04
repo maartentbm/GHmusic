@@ -30,7 +30,6 @@ $(function () {
 	};
 
 	var setPageFromHash = function () {
-		console.error("setPageFromHash");
 		if (!ignoreHashChange) {
 			var hash = window.location.hash.replace("#", "") || "home";
 			hash && $('.page[data-page-id=' + hash + ']').length && setPage(null, hash);
