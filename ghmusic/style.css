@@ -171,3 +171,7 @@ footer .copyright {
 	font-size: small;
 	text-align: center;
 }
+
+footer .set-page {
+	text-decoration: underline;
+}
