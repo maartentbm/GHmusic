@@ -122,6 +122,10 @@ content {
 	margin-top: 25px;
 }
 
+.page[data-page-id="aboutme"] ul {
+	list-style-type: square;
+}
+
 dt {
 	font-weight: bold;
 	margin-top: 1em;
