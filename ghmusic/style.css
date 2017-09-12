@@ -122,6 +122,11 @@ content {
 	margin-top: 25px;
 }
 
+dt {
+	font-weight: bold;
+	margin-top: 1em;
+}
+
 .construction {
 	font-size: xx-large;
 	color: red;
