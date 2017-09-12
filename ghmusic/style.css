@@ -149,6 +149,12 @@ img {
 	margin-left: 10px;
 }
 
+iframe.soundcloud {
+	margin: 1em auto;
+	width: 90%;
+	display: block;
+}
+
 footer {
 	background-color: darkgray;
 }
