@@ -117,7 +117,7 @@ content {
 	flex: 1;
 	flex-basis: auto; /* IE */
 	display: block;
-	padding: 0 15px;
+	padding: 0 30px;
 	padding-bottom: 25px;
 	margin-top: 40px;
 }
