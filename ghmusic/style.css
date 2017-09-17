@@ -77,6 +77,10 @@ header h1 em {
 	color: white;
 }
 
+#menu-alias {
+	display: none;
+}
+
 #menu {
 	background-color: #003080;
 }

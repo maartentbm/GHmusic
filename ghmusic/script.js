@@ -16,16 +16,18 @@ $(function () {
 
 	var setPage = function (event, pageId) {
 		var pageId = pageId || $(event.target).closest('.set-page').data('pageId') || 'invalid',
-			menuTop = $("#menu").offset().top,
+			headerBtm = $("header").height(),
 			currentPos = Math.max($('html').scrollTop(), $('body').scrollTop());
 
 		$('.active').removeClass('active');
 		$('[data-page-id=' + pageId + ']').addClass('active');
 		ignoreHashChange = true;
 		window.location.hash = '#' + pageId;
-		ignoreHashChange = false;
-		if (currentPos > menuTop) {
-			$("html, body").animate({ scrollTop: menuTop }, "slow");
+		setTimeout(function () {
+			ignoreHashChange = false;
+		}, 200);
+		if (currentPos > headerBtm) {
+			$("html, body").animate({ scrollTop: headerBtm }, "slow");
 		}
 	};
 
@@ -36,7 +38,23 @@ $(function () {
 		}
 	}
 
+	// Check the initial position of the Sticky Header
+	var stickyHeaderTop = $('#menu').offset().top;
+
+	var setStickyMenu = function () {
+		if ($(window).scrollTop() > stickyHeaderTop) {
+			$('#menu').css({ position: 'fixed', top: '0px' });
+			$('#menu-alias').css('display', 'block');
+			$('#menu-alias').css('height', $('#menu').height());
+		} else {
+			$('#menu').css({ position: 'static', top: '0px' });
+			$('#menu-alias').css('display', 'none');
+		}
+	}
+
 	setPageFromHash();
+	setStickyMenu();
+
 	try {
 		var storedLang = localStorage.getItem('lang');
 	} catch (error) {
@@ -47,4 +65,5 @@ $(function () {
 	$('.set-page[data-page-id]').click(setPage);
 	$('[data-set-lang]').click(setLanguage);
 	$(window).on('hashchange', setPageFromHash);
+	$(window).scroll(setStickyMenu);
 });
