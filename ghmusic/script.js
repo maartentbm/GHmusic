@@ -13,6 +13,7 @@ $(function () {
 	};
 
 	var ignoreHashChange = false;
+	var visitedPages = {};
 
 	var setPage = function (event, pageId, dontScroll) {
 		var pageId = pageId || $(event.target).closest('.set-page').data('pageId') || 'invalid',
@@ -26,6 +27,12 @@ $(function () {
 		setTimeout(function () {
 			ignoreHashChange = false;
 		}, 200);
+		if (!visitedPages[pageId]) {
+			$('.page.active iframe[data-src]').each(function (index, el) {
+				$(el).attr('src', $(el).data('src') || "");
+			});
+			visitedPages[pageId] = true;
+		}
 		if (!dontScroll && currentPos > headerBtm) {
 			$("html, body").animate({ scrollTop: headerBtm }, "slow");
 		}
