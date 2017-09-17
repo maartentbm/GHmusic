@@ -14,7 +14,7 @@ $(function () {
 
 	var ignoreHashChange = false;
 
-	var setPage = function (event, pageId) {
+	var setPage = function (event, pageId, dontScroll) {
 		var pageId = pageId || $(event.target).closest('.set-page').data('pageId') || 'invalid',
 			headerBtm = $("header").height(),
 			currentPos = Math.max($('html').scrollTop(), $('body').scrollTop());
@@ -26,7 +26,7 @@ $(function () {
 		setTimeout(function () {
 			ignoreHashChange = false;
 		}, 200);
-		if (currentPos > headerBtm) {
+		if (!dontScroll && currentPos > headerBtm) {
 			$("html, body").animate({ scrollTop: headerBtm }, "slow");
 		}
 	};
@@ -34,7 +34,7 @@ $(function () {
 	var setPageFromHash = function () {
 		if (!ignoreHashChange) {
 			var hash = window.location.hash.replace("#", "") || "home";
-			hash && $('.page[data-page-id=' + hash + ']').length && setPage(null, hash);
+			hash && $('.page[data-page-id=' + hash + ']').length && setPage(null, hash, true);
 		}
 	}
 
