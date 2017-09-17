@@ -15,21 +15,35 @@ body {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	margin: 0px auto;
+	margin: 0;
+	padding: 0;
 	background-color: white;
 	font-family: Calibri, sans-serif;
 	font-size: 13pt;
 	color: black;
-	min-width: 700px;
-	width: 80%;
-	max-width: 100%;
+	width: 100%;
 	min-height: 100%;
 }
 
+.full-width {
+	width: 100%;
+}
+
+content,
+.full-width > * {
+	display: block;
+	margin: 0px auto;
+	min-width: 700px;
+	width: 70%;
+	max-width: 100%;
+}
+
 @media only screen and (max-width: 700px) {
-	body {
-		width: 100%;
+	content,
+	.full-width > * {
 		min-width: 100%;
+		width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -64,15 +78,18 @@ header h1 em {
 }
 
 #menu {
-	position: relative;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
 	background-color: #003080;
 }
 
-#menu li {
+#menu ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+
+#menu ul li {
 	float: left;
 	cursor: pointer;
 }
@@ -178,7 +195,7 @@ footer ul {
 	list-style-type: none;
 }
 
-footer .copyright {
+.copyright {
 	padding: 15px;
 	background-color: gray;
 	color: darkgray;
