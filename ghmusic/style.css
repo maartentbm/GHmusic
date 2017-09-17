@@ -117,9 +117,7 @@ content {
 	flex: 1;
 	flex-basis: auto; /* IE */
 	display: block;
-	padding: 0 30px;
-	padding-bottom: 25px;
-	margin-top: 40px;
+	padding: 40px 15px 25px 20px;
 }
 
 .page[data-page-id="aboutme"] ul {
