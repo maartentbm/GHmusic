@@ -143,6 +143,20 @@ content {
 	padding: 40px 15px 25px 20px;
 }
 
+
+.page[data-page-id="home"] ul {
+	list-style-type: none;
+	padding-inline-start: 15px;
+}
+
+.page[data-page-id="home"] ul li {
+	background-image: url("bullet-guitar.svg");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 1.7em;
+	padding-inline-start: 2em;
+}
+
 .page[data-page-id="aboutme"] ul {
 	list-style-type: square;
 }
