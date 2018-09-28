@@ -19,7 +19,7 @@ body {
 	padding: 0;
 	background-color: white;
 	font-family: Calibri, sans-serif;
-	font-size: 13pt;
+	font-size: 110%;
 	color: black;
 	width: 100%;
 	min-height: 100%;
@@ -108,6 +108,7 @@ header h1 em {
 	text-align: center;
 	padding: 12px;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 #menu li[data-set-lang] {
@@ -132,6 +133,7 @@ header h1 em {
 
 #menu .active {
 	background-color: #bf0010;
+	font-weight: bold;
 }
 
 content {
@@ -157,7 +159,7 @@ dt {
 }
 
 h2 {
-	font-size: 125%;
+	font-size: 130%;
 	margin-top: 25px;
 }
 
@@ -170,7 +172,7 @@ img {
 
 iframe.soundcloud {
 	margin: 1em auto;
-	width: 90%;
+	width: 100%;
 	display: block;
 }
 
@@ -209,4 +211,9 @@ footer ul {
 
 footer .set-page {
 	text-decoration: underline;
+}
+
+.intro {
+	font-size: 120%;
+	font-style: italic;
 }
