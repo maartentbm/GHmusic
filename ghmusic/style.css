@@ -51,9 +51,9 @@ content,
 
 .grey-bar {
 	margin: 0 -9999rem;
-	padding: 0.5rem 9999rem;
+	padding: 1px 9999rem;
 	background: #f6f6f6;
-  }
+}
 
 .page:not(.active),
 [data-set-lang].selected,
