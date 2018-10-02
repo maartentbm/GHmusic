@@ -71,10 +71,6 @@ header h1 {
 	text-align: center;
 }
 
-header h1 em {
-	font-size: larger;
-}
-
 .noscript {
 	background-color: red;
 	font-size: larger;
@@ -165,7 +161,11 @@ h2 {
 	margin-top: 25px;
 }
 
-img {
+header img.logo {
+	max-height: 10em;
+}
+
+content img {
 	width: 250px;
 	max-width: 50%;
 	float: right;
@@ -196,7 +196,6 @@ img {
 }
 
 .page[data-page-id="partners"] img {
-	float: right;
 	width: 10em;
 	max-height: 10em;
 }
