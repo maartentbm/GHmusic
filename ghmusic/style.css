@@ -172,6 +172,10 @@ content img {
 	margin-left: 10px;
 }
 
+img.round {
+	border-radius: 50%;
+}
+
 .page[data-page-id="home"] ul {
 	list-style-type: none;
 	padding-inline-start: 15px;
