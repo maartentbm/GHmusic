@@ -41,7 +41,10 @@ $(function () {
 	var setPageFromHash = function () {
 		if (!ignoreHashChange) {
 			var hash = window.location.hash.replace("#", "") || "home";
-			hash && $('.page[data-page-id=' + hash + ']').length && setPage(null, hash, true);
+			if (!hash || !$('.page[data-page-id=' + hash + ']').length) {
+				hash = "home";
+			}
+			setPage(null, hash, true);
 		}
 	}
 
