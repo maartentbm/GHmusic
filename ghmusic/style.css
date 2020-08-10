@@ -250,3 +250,15 @@ footer .set-page {
 	font-size: 120%;
 	font-style: italic;
 }
+
+.text-prod {
+	color: red;
+}
+
+.text-rec {
+	color: green;
+}
+
+.text-stud {
+	color: orange;
+}
