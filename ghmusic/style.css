@@ -58,6 +58,9 @@ body[data-lang="en"] [lang]:not([lang="en"]) {
 header {
 	padding: 0;
 	background-color: #bababa;
+	background-image: url('img/header.png');
+	background-size: cover;
+	background-position: center;
 	color: #003080;
 }
 
