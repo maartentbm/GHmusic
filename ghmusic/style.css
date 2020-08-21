@@ -160,10 +160,20 @@ header img.logo {
 }
 
 content img {
-	width: 250px;
-	max-width: 50%;
+	display: block;
+	width: 300px;
 	float: right;
 	margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	content img {
+		margin: 0 auto;
+		width: auto;
+		max-width: 90%;
+		max-height: 500px;
+		float: none;
+	}
 }
 
 img.round {
