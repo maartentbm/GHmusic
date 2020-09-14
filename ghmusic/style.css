@@ -162,7 +162,7 @@ header img.logo {
 	max-height: 10em;
 }
 
-content img {
+content img:not(.except), .img {
 	display: block;
 	width: 300px;
 	float: right;
@@ -170,13 +170,17 @@ content img {
 }
 
 @media screen and (max-width: 600px) {
-	content img {
+	content img:not(.except), .img {
 		margin: 0 auto;
 		width: auto;
 		max-width: 90%;
 		max-height: 500px;
 		float: none;
 	}
+}
+
+img.small {
+	width: 50px;
 }
 
 img.round {
