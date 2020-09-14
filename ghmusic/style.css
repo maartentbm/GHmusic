@@ -187,6 +187,12 @@ img.round {
 	border-radius: 50%;
 }
 
+table td {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+
 .page[data-page-id="aboutme"] ul {
 	list-style-type: square;
 }
