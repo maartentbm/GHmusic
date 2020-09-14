@@ -187,10 +187,16 @@ img.round {
 	border-radius: 50%;
 }
 
+table {
+	border-collapse: collapse;
+	max-width: 50em;
+}
+
 table td {
 	padding-top: 5px;
-	padding-bottom: 10px;
+	padding: 8px 5px 5px 8px;
 	vertical-align: top;
+	border-bottom: 1px solid grey;
 }
 
 .page[data-page-id="aboutme"] ul {
