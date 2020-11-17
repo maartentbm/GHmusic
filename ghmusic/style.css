@@ -179,6 +179,17 @@ content img:not(.except), .img {
 	}
 }
 
+.releases {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.releases img {
+	float: none !important;
+}
+
 img.small {
 	width: 50px;
 }
