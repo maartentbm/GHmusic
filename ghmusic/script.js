@@ -28,7 +28,7 @@ $(function () {
 			ignoreHashChange = false;
 		}, 200);
 		if (!visitedPages[pageId]) {
-			$('.page.active iframe[data-src]').each(function (index, el) {
+			$('.page.active [data-src]').each(function (index, el) {
 				$(el).attr('src', $(el).data('src') || "");
 			});
 			visitedPages[pageId] = true;
