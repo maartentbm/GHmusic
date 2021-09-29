@@ -62,8 +62,17 @@ $(function () {
 		}
 	}
 
+	var showPlannedContent = function () {
+		var now = new Date();
+		$('[data-hide-until]').each(function (i, el) {
+			var $el = $(el);
+			new Date($el.data('hide-until')) < now && $el.show() || $el.hide();
+		});
+	}
+
 	setPageFromHash();
 	setStickyMenu();
+	showPlannedContent();
 
 	try {
 		var storedLang = localStorage.getItem('lang');
