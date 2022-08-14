@@ -40,9 +40,9 @@ $(function () {
 
 	var setPageFromHash = function () {
 		if (!ignoreHashChange) {
-			var hash = window.location.hash.replace("#", "") || "home";
+			var hash = window.location.hash.replace("#", "") || "portfolio";
 			if (!hash || !$('.page[data-page-id=' + hash + ']').length) {
-				hash = "home";
+				hash = "portfolio";
 			}
 			setPage(null, hash, true);
 		}
